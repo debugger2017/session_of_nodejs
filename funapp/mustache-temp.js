@@ -8,5 +8,3 @@ result = mustache.render("Hello {{first_name}} {{last_name}}",
 )
 
 console.log(result)
-
-mustache.listen
