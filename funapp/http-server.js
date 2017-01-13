@@ -1,9 +1,12 @@
 var http = require('http')
-
+var randomNumber = require('./random_number.js')
 requestHandler = function(req,res) {
 	//console.log('Inside handler');
 	if(req.url == '/'){
-		res.end('hi')
+		result = randomNumber()
+		console.log(result)
+		res.end(result + " ")
+		
 	}
 	else{
 		res.end('hello')
@@ -13,6 +16,6 @@ requestHandler = function(req,res) {
 
 var server = http.createServer(requestHandler);
 
-server.listen(8000,function(){
-	console.log('Started server on port 3000');
+server.listen(7000,function(){
+	console.log('Started server on port 7000');
 })
