@@ -2,7 +2,6 @@ var http = require('http')
 
 requestHandler = function(req,res) {
 	//console.log('Inside handler');
-	console.log(req.url);
 	if(req.url == '/'){
 		res.end('hi')
 	}
