@@ -4,7 +4,7 @@ var app = express();
 
 var publicPath = path.resolve(__dirname, 'public');
 
-app.use(static(publicPath));
+app.use(express.static(publicPath));
 
 app.use(function(req,res,next){
 	console.log("Inside a middleware" + req.url);
@@ -12,7 +12,7 @@ app.use(function(req,res,next){
 })
 
 app.use(function(req,res){
-	req.status(200).send('File not found')
-})
+	res.status(200).send('Hello world')
+});
 
 app.listen(3007);
