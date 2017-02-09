@@ -1,14 +1,17 @@
 var express = require('express')
 var path = require('path')
 var app = express();
+var express = require("express");
+var path = require("path");
 
-app.set("view engine" , "ejs");
-app.set("views",path.resolve(__dirname,"views"));
+var app = express();
 
-app.get("/",function(req,res) {
-	res.render("index", {
-        message: "Rendered index page"
-    });
+app.set("views", path.resolve(__dirname, "views"));
+
+app.set("view engine", "ejs");
+
+app.get("/", function(req, res){
+    res.render("index")
 });
 
-app.listen(4059);
+app.listen(4061);
