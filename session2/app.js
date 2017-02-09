@@ -2,9 +2,13 @@ var express = require('express')
 var path = require('path')
 var app = express();
 
-var publicPath = path.resolve(__dirname, 'public');
+app.set("view engine" , "ejs");
+app.set("views",path.resolve(__dirname,"views"));
 
-app.get('/users/:username', function(req,res){
-	res.end("Hello ", req.params.username);
+app.get("/",function(req,res) {
+	res.render("index", {
+        message: "Rendered index page"
+    });
 });
-app.use()
+
+app.listen(4059);
