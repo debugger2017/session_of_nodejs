@@ -3,7 +3,7 @@ var path = require('path')
 var app = express();
 var express = require("express");
 var path = require("path");
-var call_request = require('./method.js');
+var call_request = require('./method');
 
 app.set("views", path.resolve(__dirname, "views"));
 
@@ -35,7 +35,6 @@ app.get('/', function(req, res) {
     	answer = call_request(parseInt(num1),parseInt(num2),op);
   		console.log(answer+"");  		
     }
-
   res.render('index', { answer: answer });
 });
 app.listen(4066);
