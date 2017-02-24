@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+</head>
+<body>
+	<div class="container">
+		<a class="btn btn-lg" href="/new-tweet">Add tweet !</a>
+	</div>
+	<% if (tweets.length){ %>
+    <% tweets.forEach(function(tweet){ %>
+      <%= tweet.name.toUpperCase() %>
+      <%= tweet.content %>
+      
+    <% }) %>
+<% } else { %>
+ No entries present
+ <% } %>
+</body>
+</html>
